@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "c095c4e3-ece8-4f2f-b5cc-584d28f09246",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/getAvailableFlights",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"flightDateTime\": \"2017-03-15\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/getAvailableFlights",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAvailableFlights"
+					]
+				},
+				"description": "Sets a JSON Object"
+			},
+			"response": []
+		},
+		{
+			"name": "/getDestinationsForAirline",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"airlineName\": \"British Airways\", \"rowPaginationOffset\": \"195\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/getDestinationsForAirline",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getDestinationsForAirline"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/putTicketPurchase",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"flightCode\": \"BA001\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/putTicketPurchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"putTicketPurchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/addNewFlightForRoute",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"flightCode\":\"BA002\",\n\t\"airlineName\":\"British Airways\",\n\t\"departureAirport\":\"LHR\",\n\t\"destinationAirport\":\"LGW\",\n\t\"departureDate\":\"2017-03-15 08:40:00\",\n\t\"aircraftType\":\"Boeing 747-400\",\n\t\"seatAvailability\":\"200\",\n\t\"price\":\"1000\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/addNewFlightForExistingRoute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"addNewFlightForExistingRoute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/putChangeTicketPrice",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"flightCode\": \"BA001\",\n\t\"price\": \"300\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/putChangeTicketPrice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"putChangeTicketPrice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
