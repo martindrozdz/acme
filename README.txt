@@ -4,5 +4,6 @@ You will need Postman to import the json file.
 You will need a trial version of Anypoint Studio to open the project with.
 
 Please note that there is a user name and password for the zip file.
-These can be obtained from martin.drozdz@gmail.com
+
+For any question please contact me on martin.drozdz@gmail.com
 
